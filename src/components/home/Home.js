@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from '../header/Header';
 import './home.css'
 
 
 const Home = () => {
     return (
         <div>
-            <Header></Header>
 
             <h1>This is real home component</h1>
             <div className='inner-container showgrid'>

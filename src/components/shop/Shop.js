@@ -1,6 +1,5 @@
 import React from 'react';
 import Products from '../products/Products';
-import Header from '../header/Header';
 import './shop.css'
 const Shop = () => {
     const someProducts = [
@@ -11,7 +10,7 @@ const Shop = () => {
     ]
     return (
         <div>
-            <Header></Header>
+
             <div className='boxes'>
                 {
                     someProducts.map((product, idx) => <Products
