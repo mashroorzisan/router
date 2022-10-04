@@ -1,5 +1,11 @@
+.gridnow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
 .inner-container {
-    width: 30%;
+    width: 40%;
     margin: auto;
     background-color: #fdfdfd;
     padding: 50px;
@@ -9,10 +15,12 @@
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 900;
+    text-align: left;
+    color: steelblue;
 }
 
 .text {
-    font-size: 13px;
+    font-size: 18px;
     color: #545454;
     line-height: 30px;
     text-align: justify;

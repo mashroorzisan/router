@@ -1,29 +1,24 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Blogs from '../blogs/Blogs';
 import './home.css'
 
 
 const Home = () => {
+    const kisuEkta = useLoaderData();
     return (
         <div>
 
-            <h1>This is real home component</h1>
-            <div className='inner-container showgrid'>
+            <h1>we have {kisuEkta.length}</h1>
+            <div className='inner-container '>
 
-                <div className='text'>
-                    <h2>blog1</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quod assumenda dolores autem consequuntur, sint saepe? Vitae facere vero alias voluptatibus, voluptas culpa nihil a consequatur porro voluptate neque amet.</p>
-                </div>
-                <div className='text'>
-                    <h2>blog1</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quod assumenda dolores autem consequuntur, sint saepe? Vitae facere vero alias voluptatibus, voluptas culpa nihil a consequatur porro voluptate neque amet.</p>
-                </div>
-                <div className='text'>
-                    <h2>blog3</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quod assumenda dolores autem consequuntur, sint saepe? Vitae facere vero alias voluptatibus, voluptas culpa nihil a consequatur porro voluptate neque amet.</p>
-                </div>
-                <div className='text'>
-                    <h2>blog4</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quod assumenda dolores autem consequuntur, sint saepe? Vitae facere vero alias voluptatibus, voluptas culpa nihil a consequatur porro voluptate neque amet.</p>
+                <div className='text showgrid'>
+                    {
+                        kisuEkta.map(protita => <Blogs
+                            key={protita.id}
+                            protita={protita}
+                        ></Blogs>)
+                    }
                 </div>
             </div>
         </div>
